@@ -11,35 +11,55 @@
       width: 100%;
       height: 100%;
     }
+    p, a {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 30px; font-weight: bold;
+      color: black;
+      letter-spacing: 2px;
+    }
+    a:hover, a:active {
+      color: black;
+      border-bottom: 4px solid black;
+    }
+
+
     .boards {
-      margin: 0.5vw 1vw;
+      margin: 0.5vw 2vw;
     }
     .board {
-      width: 98vw;
+      width: 96vw;
     }
     #go {
       margin-top: 0.5vw;
     }
-    p {
-      font-family: Helvetica, Arial, sans-serif;
-      font-size: 24px; font-weight: bold;
-      margin-bottom: 1vh;
+    #name, #wdid {
+      margin-top: 2vh;
     }
     #name {
       float: left;
-      margin-left: 1vw;
+      margin-left: 3vw;
+    }
+    #wdid {
+      float: right;
+      margin-right: 3vw;
+      transform: rotate(1deg);
+    }
+    #email, #year {
+      margin-bottom: 2vh;
     }
     #email {
-      float: left;
-      margin-left: 15%;
-    }
-    #gd {
-      float: left;
-      margin-left: 10%;
+      float: right;
+      margin-right: 3vw;
     }
     #year {
-      float: right;
-      margin-right: 1vw;
+      float: left;
+      margin-left: 3vw;
+    }
+
+    @media screen and (max-width: 890px) {
+      #wdid, #year {
+        display: none;
+      }
     }
   </style>
   <script>
@@ -50,47 +70,37 @@
   </script>
 </head>
 <body>
-  <div class="all">
-    <div class="top">
-
-      <div class="boards">
-          <object id="go" class="board" type="image/svg+xml" data="assets/board_2.svg"></object>
-      </div>
-
-      <div class="boards">
-          <object id="scrab" class="board" type="image/svg+xml" data="assets/board_3.svg"></object>
-      </div>
+  <div id="wrap">
+    <p id="name">Seokhoon Choi</p>
+    <p id="wdid">Creative direction &amp; graphic design</p>
+    <div class="boards">
+      <object id="go" class="board" type="image/svg+xml" data="assets/board_2.svg"></object>
     </div>
 
     <div class="boards">
-        <object id="yut" class="board" type="image/svg+xml" data="assets/board_4.svg"></object>
+      <object id="scrab" class="board" type="image/svg+xml" data="assets/board_3.svg"></object>
     </div>
 
     <div class="boards">
-        <object id="mono" class="board" type="image/svg+xml" data="assets/board_5.svg"></object>
+      <object id="yut" class="board" type="image/svg+xml" data="assets/board_4.svg"></object>
     </div>
 
     <div class="boards">
-        <object id="chichess" class="board" type="image/svg+xml" data="assets/board_6.svg"></object>
+      <object id="mono" class="board" type="image/svg+xml" data="assets/board_5.svg"></object>
     </div>
 
-      <div class="boards">
-          <object id="chess" class="board" type="image/svg+xml" data="assets/board_1.svg"></object>
-      </div>
+    <div class="boards">
+      <object id="chichess" class="board" type="image/svg+xml" data="assets/board_6.svg"></object>
+    </div>
 
-    <p id="name">
-      Seokhoon Choi
-    </p>
-    <p id="email">
-      khoon@khoonster.com
-    </p>
-    <p id="gd">
-      Graphic design
-    </p>
-    <p id="year">
-      2015
-    </p>
+    <div class="boards">
+      <object id="chess" class="board" type="image/svg+xml" data="assets/board_1.svg"></object>
+    </div>
+
+    <p id="email"><a href="#">khoon@khoonster.com</a></p>
+    <p id="year">2015</p>
   </div>
+
 
 </body>
 </html>
